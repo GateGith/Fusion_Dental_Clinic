@@ -2,106 +2,194 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b1717">
-<meta name="description" content="Concept d'expérience patient digitale personnalisé pour Fusion Dental Clinic — Baba Hassen, Alger.">
-<title>Fusion Dental Clinic — L'expérience commence avant la clinique</title>
-<link rel="preload" as="image" href="assets/fusion-patient-space.jpg">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111713">
+<title>Fusion — Premier contact patient | Prototype personnalisé</title>
+<meta name="description" content="Prototype personnalisé pour Fusion Dental Clinic — une expérience patient qui commence avant la clinique.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<a class="skip" href="#main">Aller au contenu</a>
-<header class="nav">
-  <a class="brand" href="#top" aria-label="Fusion Dental Clinic">
-    <span class="mark">F</span><span><b>FUSION</b><small>DENTAL CLINIC</small></span>
-  </a>
-  <nav aria-label="Navigation principale">
-    <a href="#parcours">Parcours</a><a href="#soins">Soins</a><a href="#espace">La clinique</a>
-  </nav>
-  <a class="nav-cta" href="#contact">Parler à Fusion <span>↗</span></a>
+<div class="progress"><span id="progressBar"></span></div>
+
+<header class="topbar">
+  <a class="brand" href="#top">FUSION<span>•</span></a>
+  <div class="top-center"><span class="live-dot"></span> PROTOTYPE PERSONNALISÉ · BABA HASSEN</div>
+  <a class="topcall" href="tel:+213555555596">0555 55 55 96 <span>↗</span></a>
 </header>
 
-<main id="main">
-<section class="hero" id="top">
+<main id="top">
+<section class="hero section">
   <div class="hero-copy">
-    <div class="eyebrow-row"><p class="eyebrow">BABA HASSEN · ALGER</p><span class="live-dot"></span><span class="quiet-label">EXPÉRIENCE PATIENT</span></div>
-    <h1>Une expérience patient qui commence <em>avant</em> la clinique.</h1>
-    <p class="lead">Quand un patient découvre Fusion sur Google ou Instagram, la première question n'est pas « quel est votre site ? ». C'est : <strong>« Est-ce le bon endroit pour moi ? »</strong></p>
-    <div class="actions">
-      <a class="btn dark" href="#parcours">Voir le parcours <span>↓</span></a>
-      <a class="quiet" href="#contact">Parler à l'équipe</a>
+    <div class="micro-proof"><span>CECI N'EST PAS UN TEMPLATE</span><i></i><span>CONÇU POUR FUSION</span></div>
+    <p class="eyebrow">01 — LE PREMIER CONTACT</p>
+    <h1>Le patient<br><em>décide</em><br>avant la porte.</h1>
+    <p class="hero-lede">Fusion a déjà une présence, des avis et un environnement. Nous avons construit une expérience qui montre ce qui peut se passer <strong>entre la découverte et le prochain geste.</strong></p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#test">Tester en 20 secondes <span>↓</span></a>
+      <a class="text-link" href="#why">Pourquoi Fusion ? <span>↘</span></a>
     </div>
-    <div class="proof-strip" aria-label="Preuves publiques observées">
-      <div><b>4,7</b><span>/ 5</span></div><i></i><div><b>213</b><span>avis Google</span></div><i></i><div><b>07</b><span>catégories de soins affichées</span></div>
+    <div class="hero-proofline"><strong>4,7</strong><span>★</span><small>213 avis publics · Google Maps</small></div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-image"><img src="assets/fusion-patient-space.jpg" alt="Espace de Fusion Dental Clinic visible dans les contenus publics fournis"></div>
+    <div class="hero-stamp"><span>FUSION</span><strong>AVANT<br>LA CLINIQUE</strong><small>Patient Experience Prototype</small></div>
+    <div class="hero-caption">L'environnement existe déjà.<br><strong>Le premier contact peut en raconter la même histoire.</strong></div>
+  </div>
+</section>
+
+<section class="signal">
+  <div class="signal-intro">
+    <p class="eyebrow">02 — EN 3 SECONDES</p>
+    <h2>On ne vous montre pas un site.<br><em>On vous montre une décision.</em></h2>
+  </div>
+  <div class="signal-grid">
+    <article><span>01</span><h3>Découvrir</h3><p>La personne arrive depuis Google, Instagram ou une recommandation.</p></article>
+    <article><span>02</span><h3>Comprendre</h3><p>Elle identifie rapidement ce qui correspond à son besoin.</p></article>
+    <article><span>03</span><h3>Être rassurée</h3><p>Elle trouve des preuves et un environnement cohérent avec Fusion.</p></article>
+    <article class="dark"><span>04</span><h3>Agir</h3><p>Une prochaine étape évidente remplace la recherche et l'hésitation.</p></article>
+  </div>
+</section>
+
+<section class="test section" id="test">
+  <div class="section-head compact">
+    <p class="eyebrow">03 — TESTEZ LE PARCOURS</p>
+    <h2>Faites le patient.<br><em>Pas le visiteur d'un site.</em></h2>
+    <p>Choisissez ce que vous cherchez. Le parcours change. C'est précisément la différence entre une page de services et une expérience.</p>
+  </div>
+  <div class="test-shell">
+    <div class="test-prompt">
+      <div class="prompt-label">FUSION · PREMIER CONTACT</div>
+      <h3>Vous venez de découvrir la clinique.<br>Pourquoi êtes-vous ici ?</h3>
+      <div class="choices" id="choices">
+        <button data-type="pain"><span>01</span><strong>J'ai une douleur / urgence</strong><i>↗</i></button>
+        <button data-type="esthetic"><span>02</span><strong>J'ai un projet esthétique</strong><i>↗</i></button>
+        <button data-type="replace"><span>03</span><strong>Je cherche à remplacer une dent</strong><i>↗</i></button>
+        <button data-type="align"><span>04</span><strong>Je veux aligner mes dents</strong><i>↗</i></button>
+        <button data-type="question"><span>05</span><strong>Je veux simplement me renseigner</strong><i>↗</i></button>
+      </div>
+    </div>
+    <div class="journey-result" id="journeyResult">
+      <span class="result-placeholder">VOTRE PARCOURS APPARAÎTRA ICI</span>
     </div>
   </div>
-  <div class="hero-media">
-    <img src="assets/fusion-patient-space.jpg" alt="Espace intérieur de Fusion Dental Clinic à Baba Hassen" width="1600" height="1200">
-    <div class="image-chip"><span>01</span><b>L'environnement fait déjà partie de l'expérience.</b></div>
-    <div class="media-tag">FUSION · BABA HASSEN</div>
+</section>
+
+<section class="difference section">
+  <div class="difference-top">
+    <p class="eyebrow">04 — LA DIFFÉRENCE</p>
+    <h2>Un template montre des pages.<br><em>Ce prototype montre un comportement.</em></h2>
+  </div>
+  <div class="compare">
+    <div class="compare-card old">
+      <div class="compare-label">PRÉSENCE DIGITALE CLASSIQUE</div>
+      <div class="stack"><span>Google</span><b>→</b><span>Instagram</span><b>→</b><span>Liste de soins</span><b>→</b><span>« Contactez-nous »</span></div>
+      <p>Le patient doit faire le lien lui-même entre son besoin et l'action suivante.</p>
+    </div>
+    <div class="compare-arrow">+</div>
+    <div class="compare-card new">
+      <div class="compare-label">PROPOSITION POUR FUSION</div>
+      <div class="stack"><span>Découvrir</span><b>→</b><span>Choisir son besoin</span><b>→</b><span>Être rassuré</span><b>→</b><strong>Agir</strong></div>
+      <p>Le parcours accompagne la décision au lieu de simplement afficher l'information.</p>
+    </div>
   </div>
 </section>
 
-<section class="manifesto">
-  <div class="manifesto-inner">
-    <p class="label">LE POINT DE DÉPART</p>
-    <h2>Fusion travaille déjà l'expérience <em>à l'intérieur.</em></h2>
-    <p class="manifesto-copy">Le digital n'a pas besoin de réinventer la clinique. Il doit prolonger ce que le patient va ressentir : clarté, confiance, qualité d'accueil et une prochaine étape évidente.</p>
-    <div class="manifesto-proof"><span>OBSERVATION</span><b>« expérience patient premium »</b><small>Positionnement mentionné dans les communications de recrutement publiques de Fusion.</small></div>
+<section class="space section">
+  <div class="space-copy">
+    <p class="eyebrow">05 — UNE PREUVE QUI EXISTE DÉJÀ</p>
+    <h2>Votre environnement n'a pas besoin d'être <em>inventé.</em></h2>
+    <p>Les contenus publics disponibles montrent déjà une identité physique forte. Le prototype utilise ces éléments comme preuve, pas comme décoration.</p>
+    <div class="mini-rule"></div>
+    <p class="small-note"><strong>Principe :</strong> aucune photo stock utilisée pour faire croire qu'elle appartient à Fusion.</p>
+  </div>
+  <div class="space-gallery">
+    <figure class="tall"><img src="assets/fusion-lounge.jpg" alt="Espace intérieur visible dans les contenus fournis"></figure>
+    <figure><img src="assets/fusion-waiting-room.jpg" alt="Espace d'accueil visible dans les contenus fournis"></figure>
+    <figure class="detail"><img src="assets/fusion-dental-detail.jpg" alt="Détail dentaire visible dans les contenus fournis"></figure>
   </div>
 </section>
 
-<section class="journey" id="parcours">
-  <div class="head">
-    <div><p class="label">PATIENT JOURNEY</p><h2>Une question.<br>Une réponse.<br><em>Une prochaine étape.</em></h2></div>
-    <div class="head-note"><span>01 → 04</span><p>Le parcours réduit la friction au lieu d'ajouter des pages.</p></div>
-  </div>
-  <div class="journey-grid">
-    <article class="journey-card"><span>01</span><h3>« Est-ce le bon endroit ? »</h3><p>Une première impression qui montre immédiatement l'univers de Fusion et situe la clinique.</p><div class="card-foot">Découverte</div></article>
-    <article class="journey-card"><span>02</span><h3>« De quoi ai-je besoin ? »</h3><p>Les soins sont lisibles, regroupés et présentés sans obliger le patient à fouiller plusieurs canaux.</p><div class="card-foot">Compréhension</div></article>
-    <article class="journey-card dark"><span>03</span><h3>« Puis-je vous faire confiance ? »</h3><p>Environnement réel, avis publics et informations claires : la preuve arrive avant la demande de rendez-vous.</p><div class="card-foot">Réassurance</div></article>
-    <article class="journey-card gold"><span>04</span><h3>« Quelle est la prochaine étape ? »</h3><p>Une action évidente, accessible depuis le téléphone, sans chercher le numéro ou revenir à Google.</p><a href="#contact">Parler à Fusion <span>→</span></a></article>
-  </div>
-</section>
-
-<section class="business" id="business">
-  <div class="business-intro"><p class="label">CE QUE CELA CHANGE</p><h2>Pas seulement plus beau.<br><em>Plus utile.</em></h2><p>Le rôle du digital est de faire une partie du travail avant que le patient arrive à l'accueil.</p></div>
-  <div class="business-list">
-    <div><span>01</span><div><b>Moins de recherche</b><p>Les informations essentielles sont réunies dans un parcours unique.</p></div></div>
-    <div><span>02</span><div><b>Moins d'hésitation</b><p>Les preuves et l'environnement apparaissent avant le moment de contact.</p></div></div>
-    <div><span>03</span><div><b>Une prochaine étape claire</b><p>Le téléphone reste à portée de main quand le patient est prêt.</p></div></div>
+<section class="why section" id="why">
+  <div class="why-card">
+    <div>
+      <p class="eyebrow">06 — POURQUOI FUSION ?</p>
+      <h2>Parce que la présence<br>est déjà là.</h2>
+    </div>
+    <div class="why-proof">
+      <div class="big-rating"><strong>4,7</strong><span>★★★★★</span><small>213 avis publics</small></div>
+      <p>Ce prototype ne part donc pas d'une clinique inconnue à qui l'on propose « un site ». Il part d'une activité qui possède déjà <strong>une preuve publique, une localisation, des services visibles et un environnement identifiable.</strong></p>
+      <p>La question devient : <strong>que se passe-t-il entre cette première découverte et le prochain geste du patient ?</strong></p>
+    </div>
   </div>
 </section>
 
-<section class="services" id="soins">
-  <div class="service-intro"><p class="label">LES SOINS</p><h2>Comprendre avant<br><em>de choisir.</em></h2><p>Les catégories ci-dessous reprennent exactement les services visibles sur la fiche Google de Fusion au moment de la recherche.</p></div>
-  <div class="service-list">
-    <div><b>01</b><span>Soins dentaires</span><i>↗</i></div><div><b>02</b><span>Prothèses fixes</span><i>↗</i></div><div><b>03</b><span>Implantologie</span><i>↗</i></div><div><b>04</b><span>Botox &amp; filler</span><i>↗</i></div><div><b>05</b><span>Orthodontie (ODF)</span><i>↗</i></div><div><b>06</b><span>Chirurgie orale</span><i>↗</i></div><div><b>07</b><span>Facettes dentaires</span><i>↗</i></div>
+<section class="services section">
+  <div class="services-intro">
+    <p class="eyebrow">07 — LES SERVICES, AUTREMENT</p>
+    <h2>Le patient ne pense pas en <em>menu.</em></h2>
+    <p>Il pense en problème, objectif ou question. Voici comment les services publics de Fusion peuvent devenir des points d'entrée plutôt qu'une simple liste.</p>
+  </div>
+  <div>
+    <div class="service-board" id="serviceBoard">
+      <button data-service="Soins dentaires"><span>01</span><strong>Soins dentaires</strong><small>Problème →</small></button>
+      <button data-service="Prothèses fixes"><span>02</span><strong>Prothèses fixes</strong><small>Besoin →</small></button>
+      <button data-service="Implantologie"><span>03</span><strong>Implantologie</strong><small>Comprendre →</small></button>
+      <button data-service="Botox & filler"><span>04</span><strong>Botox & filler</strong><small>Projet →</small></button>
+      <button data-service="Orthodontie (ODF)"><span>05</span><strong>Orthodontie (ODF)</strong><small>Objectif →</small></button>
+      <button data-service="Chirurgie orale"><span>06</span><strong>Chirurgie orale</strong><small>Orienter →</small></button>
+      <button data-service="Facettes dentaires"><span>07</span><strong>Facettes dentaires</strong><small>Projet esthétique →</small></button>
+    </div>
+    <div class="service-detail" id="serviceDetail"><span>Choisissez un service.</span> Vous verrez comment il peut devenir un point de départ patient.</div>
   </div>
 </section>
 
-<section class="gallery" id="espace">
-  <div class="gallery-copy"><p class="label">L'ESPACE</p><h2>Le lieu dit déjà beaucoup.</h2><p>Le digital n'a pas besoin d'inventer une ambiance : il peut simplement la faire ressentir avant la visite.</p><div class="mini-stats"><div><b>01</b><span>Accueil</span></div><div><b>02</b><span>Espace patient</span></div><div><b>03</b><span>Univers clinique</span></div></div></div>
-  <div class="gallery-visual"><figure class="large"><img src="assets/fusion-lounge.jpg" alt="Espace patient de Fusion Dental Clinic"><figcaption>Média public associé à la présence Google de Fusion</figcaption></figure><figure><img src="assets/fusion-waiting-room.jpg" alt="Espace d'attente de Fusion Dental Clinic"><figcaption>Une seconde vue du même univers</figcaption></figure></div>
+<section class="value section">
+  <div class="section-head compact">
+    <p class="eyebrow">08 — CE QUE CELA CHANGE</p>
+    <h2>Pas « plus de pages ».<br><em>Moins de friction.</em></h2>
+    <p>Le produit final n'est pas vendu comme une promesse de résultats chiffrés. Il est conçu pour améliorer les moments où un patient hésite, cherche ou ne sait pas quoi faire ensuite.</p>
+  </div>
+  <div class="value-grid">
+    <article><span>01</span><h3>Première impression maîtrisée</h3><p>La découverte digitale commence à ressembler à l'expérience que Fusion veut faire vivre sur place.</p></article>
+    <article><span>02</span><h3>Orientation plus claire</h3><p>Le patient part de son besoin avant de devoir comprendre l'organisation des soins.</p></article>
+    <article><span>03</span><h3>Action plus évidente</h3><p>Chaque parcours se termine par une prochaine étape claire, sans prétendre qu'un système est déjà connecté.</p></article>
+    <article><span>04</span><h3>Base prête à connecter</h3><p>Appel, WhatsApp ou prise de rendez-vous peuvent être branchés selon le fonctionnement choisi par Fusion.</p></article>
+  </div>
 </section>
 
-<section class="trust">
-  <div class="trust-copy"><p class="label">LA PREUVE EXISTE DÉJÀ</p><h2>Le digital ne doit pas inventer la confiance.<br><em>Il doit la rendre visible.</em></h2><p>La fiche Google de Fusion affiche déjà une note de 4,7/5 sur 213 avis. Le rôle d'un parcours digital est de rapprocher cette preuve du moment où le patient hésite.</p></div>
-  <div class="rating-card"><div class="rating"><strong>4,7</strong><span>★★★★★</span></div><div class="review-count">213 <small>avis</small></div><div class="review-line"></div><p>« Excellent professionalism and very warm welcome. Highly recommended. »</p><small>Avis public Google · extrait observé</small></div>
+<section class="direction section">
+  <div class="direction-card">
+    <div class="direction-head">
+      <p class="eyebrow">09 — POUR LA DIRECTION</p>
+      <h2>Vous venez de tester<br><em>la proposition.</em></h2>
+      <p>Ce que vous avez vu n'est pas présenté comme un site final ni comme un template acheté ailleurs. C'est une démonstration construite à partir des éléments publics disponibles autour de Fusion.</p>
+    </div>
+    <div class="direction-grid">
+      <div><span>01</span><strong>Votre activité</strong><small>Localisation, avis, services et environnement observables.</small></div>
+      <div><span>02</span><strong>Notre proposition</strong><small>Structure, parcours, interface et interactions conçus pour cette expérience.</small></div>
+      <div><span>03</span><strong>La suite</strong><small>Valider la direction, puis connecter les contenus et canaux réels de Fusion.</small></div>
+    </div>
+    <div class="close">
+      <div>
+        <span class="close-kicker">LA QUESTION N'EST PLUS « AVEZ-VOUS BESOIN D'UN SITE ? »</span>
+        <h3>Cette direction mérite-t-elle d'être construite pour Fusion ?</h3>
+        <p>Si oui, je peux vous montrer en 5 minutes ce qui serait réellement produit.</p>
+      </div>
+      <a class="btn light" href="tel:+213555555596">Discuter de la direction <span>↗</span></a>
+    </div>
+  </div>
 </section>
 
-<section class="clinical">
-  <div class="clinical-image"><img src="assets/fusion-dental-detail.jpg" alt="Détail dentaire provenant des médias associés à Fusion"><span>LE DÉTAIL</span></div>
-  <div class="clinical-copy"><p class="label">CLARTÉ AVANT LE CONTACT</p><h2>Montrer assez pour rassurer.<br><em>Jamais plus que nécessaire.</em></h2><p>Une image clinique peut aider le patient à se projeter. Elle ne remplace ni une consultation ni un diagnostic : elle prépare simplement le premier échange.</p><div class="guardrail"><b>Principe</b><span>Aucune promesse médicale. Aucune fausse preuve. Les contenus définitifs restent validés par Fusion.</span></div></div>
+<section class="final section">
+  <p class="eyebrow">FUSION · BABA HASSEN · ALGER</p>
+  <h2>Une expérience premium<br>ne devrait pas commencer<br><em>à la porte.</em></h2>
+  <p>Elle peut commencer au moment où quelqu'un vous découvre.</p>
+  <a class="btn primary" href="tel:+213555555596">0555 55 55 96 <span>↗</span></a>
+  <p class="fineprint">Prototype de démonstration · Données publiques utilisées avec prudence · Aucun résultat médical, témoignage ou système de réservation inventé.</p>
 </section>
-
-<section class="contact" id="contact">
-  <div class="contact-copy"><p class="label">PROCHAINE ÉTAPE</p><h2>Le patient ne devrait pas avoir à chercher <em>quoi faire ensuite.</em></h2><p>Le prototype montre une direction. La version complète connecterait chaque étape aux canaux choisis par Fusion.</p></div>
-  <div class="contact-card"><span>CONTACT DIRECT</span><a class="phone" href="tel:+213555555596">0555 55 55 96 <i>↗</i></a><small>Baba Hassen · Alger</small><a class="outline" href="tel:+213555555596">Appeler Fusion</a></div>
-</section>
-
-<section class="closing"><p>Concept d'expérience digitale personnalisé pour Fusion Dental Clinic.</p><span>Prototype de direction · Les contenus médicaux définitifs, photos officielles et modalités de rendez-vous restent à valider avec l'équipe.</span></section>
 </main>
-<footer><div class="brand compact"><span class="mark">F</span><span><b>FUSION</b><small>DENTAL CLINIC</small></span></div><span>Baba Hassen · Alger</span><span>Concept · 2026</span></footer>
+
+<div class="mobile-cta"><a href="#test">Tester le parcours <span>↓</span></a></div>
 <script src="assets/app.js"></script>
-</body></html>
+</body>
+</html>
