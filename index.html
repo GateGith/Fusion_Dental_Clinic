@@ -3,193 +3,123 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#111713">
-<title>Fusion — Premier contact patient | Prototype personnalisé</title>
-<meta name="description" content="Prototype personnalisé pour Fusion Dental Clinic — une expérience patient qui commence avant la clinique.">
-<link rel="stylesheet" href="assets/style.css">
+<title>Fusion — Before the Door</title>
+<meta name="description" content="Une démonstration personnalisée de l'expérience patient avant l'arrivée à Fusion Dental Clinic.">
+<style>
+:root{--ink:#17201f;--muted:#66716f;--paper:#f5f2eb;--card:#fffdf8;--line:#d9d4c9;--accent:#b77a55;--deep:#213c38}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}button,a{font:inherit}a{text-decoration:none;color:inherit}
+.wrap{width:min(1120px,92vw);margin:auto}.top{padding:22px 0;border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between}.mark{font-weight:800}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:800}
+.hero{padding:72px 0 58px;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:end}.hero h1{font-size:clamp(44px,7vw,86px);line-height:.93;letter-spacing:-.055em;margin:16px 0 24px;max-width:850px}.hero p{font-size:20px;color:var(--muted);max-width:680px}.proof{background:var(--deep);color:white;border-radius:28px;padding:28px}.proof .big{font-size:46px;font-weight:800;line-height:1}.proof small{display:block;color:#cfd9d6;margin-top:10px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 20px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:white;font-weight:800;margin-top:18px}.btn.light{background:transparent;color:var(--ink)}section{padding:72px 0;border-top:1px solid var(--line)}h2{font-size:clamp(32px,5vw,56px);line-height:1;letter-spacing:-.04em;margin:12px 0 20px}.lead{font-size:18px;color:var(--muted);max-width:760px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px}.num{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.12em}.card h3{margin:9px 0;font-size:21px}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px}.step{padding:22px;border-top:3px solid var(--accent);background:var(--card);min-height:130px}.step b{display:block;margin-bottom:7px}.chooser{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}.choice{cursor:pointer;text-align:left;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--card);transition:.2s}.choice:hover{transform:translateY(-2px);border-color:var(--accent)}.choice strong{display:block;font-size:18px}.choice span{color:var(--muted);font-size:14px}.result{display:none;margin-top:20px;background:var(--deep);color:white;border-radius:24px;padding:28px}.result.show{display:block}.result .tag{color:#e7b28e;text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:800}.result h3{font-size:30px;margin:8px 0}.result p{color:#d8e0dd}.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}.compare>div{border-radius:22px;padding:28px;border:1px solid var(--line);background:var(--card)}.compare .after{background:#e9eee9;border-color:#cbd7d0}.quote{font-size:24px;line-height:1.2;max-width:850px;margin-top:28px}.decision{background:var(--ink);color:white;border-radius:30px;padding:42px}.decision p{color:#d9dfdc;max-width:760px}.decision .btn{background:white;color:var(--ink);border-color:white}.foot{padding:32px 0;color:var(--muted);font-size:12px}.note{font-size:12px;color:var(--muted);margin-top:18px}.pill{display:inline-block;border:1px solid var(--line);padding:7px 10px;border-radius:999px;margin:4px 4px 0 0;font-size:12px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px}.grid,.flow,.compare{grid-template-columns:1fr}.chooser{grid-template-columns:1fr}.hero h1{font-size:54px}.proof{margin-top:4px}section{padding:56px 0}}
+</style>
 </head>
 <body>
-<div class="progress"><span id="progressBar"></span></div>
+<header class="top"><div class="wrap" style="display:flex;justify-content:space-between;width:92vw"><span class="mark">FUSION</span><span>Before the door · Prototype personnalisé</span></div></header>
 
-<header class="topbar">
-  <a class="brand" href="#top">FUSION<span>•</span></a>
-  <div class="top-center"><span class="live-dot"></span> PROTOTYPE PERSONNALISÉ · BABA HASSEN</div>
-  <a class="topcall" href="tel:+213555555596">0555 55 55 96 <span>↗</span></a>
-</header>
-
-<main id="top">
-<section class="hero section">
-  <div class="hero-copy">
-    <div class="micro-proof"><span>CECI N'EST PAS UN TEMPLATE</span><i></i><span>CONÇU POUR FUSION</span></div>
-    <p class="eyebrow">01 — LE PREMIER CONTACT</p>
-    <h1>Le patient<br><em>décide</em><br>avant la porte.</h1>
-    <p class="hero-lede">Fusion a déjà une présence, des avis et un environnement. Nous avons construit une expérience qui montre ce qui peut se passer <strong>entre la découverte et le prochain geste.</strong></p>
-    <div class="hero-actions">
-      <a class="btn primary" href="#test">Tester en 20 secondes <span>↓</span></a>
-      <a class="text-link" href="#why">Pourquoi Fusion ? <span>↘</span></a>
-    </div>
-    <div class="hero-proofline"><strong>4,7</strong><span>★</span><small>213 avis publics · Google Maps</small></div>
-  </div>
-  <div class="hero-visual">
-    <div class="hero-image"><img src="assets/fusion-patient-space.jpg" alt="Espace de Fusion Dental Clinic visible dans les contenus publics fournis"></div>
-    <div class="hero-stamp"><span>FUSION</span><strong>AVANT<br>LA CLINIQUE</strong><small>Patient Experience Prototype</small></div>
-    <div class="hero-caption">L'environnement existe déjà.<br><strong>Le premier contact peut en raconter la même histoire.</strong></div>
-  </div>
+<main>
+<section class="wrap" style="border:0;padding-bottom:30px">
+<div class="hero">
+<div>
+<div class="eyebrow">Une démonstration construite pour Fusion</div>
+<h1>Votre réputation existe déjà.<br><span style="color:var(--accent)">Le patient la découvre avant la porte.</span></h1>
+<p>Nous n'avons pas commencé par dessiner un « site de clinique ». Nous avons commencé par une question plus simple : <strong>que doit vivre une personne entre sa première découverte de Fusion et son premier contact ?</strong></p>
+<a class="btn" href="#experience">Vivre le parcours en 20 secondes ↓</a>
+<p class="note">Ce prototype distingue volontairement les faits publics des propositions de conception.</p>
+</div>
+<div class="proof"><div class="eyebrow" style="color:#e7b28e">Ce qui est déjà là</div><div class="big">4,7★</div><div style="font-size:22px;font-weight:700">213 avis publics</div><small>Une preuve de confiance existe déjà. La proposition consiste à mieux la prolonger dans l'expérience digitale.</small></div>
+</div>
 </section>
 
-<section class="signal">
-  <div class="signal-intro">
-    <p class="eyebrow">02 — EN 3 SECONDES</p>
-    <h2>On ne vous montre pas un site.<br><em>On vous montre une décision.</em></h2>
-  </div>
-  <div class="signal-grid">
-    <article><span>01</span><h3>Découvrir</h3><p>La personne arrive depuis Google, Instagram ou une recommandation.</p></article>
-    <article><span>02</span><h3>Comprendre</h3><p>Elle identifie rapidement ce qui correspond à son besoin.</p></article>
-    <article><span>03</span><h3>Être rassurée</h3><p>Elle trouve des preuves et un environnement cohérent avec Fusion.</p></article>
-    <article class="dark"><span>04</span><h3>Agir</h3><p>Une prochaine étape évidente remplace la recherche et l'hésitation.</p></article>
-  </div>
+<section class="wrap">
+<div class="eyebrow">01 · Le diagnostic</div>
+<h2>On ne part pas d'un manque.<br>On part d'un actif.</h2>
+<p class="lead">Fusion possède déjà une réputation visible publiquement. Le prototype ne prétend pas connaître les performances internes de la clinique. Il explore une opportunité : rendre la première expérience digitale aussi claire et rassurante que la promesse de la clinique.</p>
+<div class="grid">
+<div class="card"><div class="num">PREUVE</div><h3>4,7★ · 213 avis</h3><p>Une base de confiance déjà construite.</p></div>
+<div class="card"><div class="num">POINT DE DÉPART</div><h3>Découverte locale</h3><p>Google, recommandations et réseaux sociaux peuvent être le premier contact.</p></div>
+<div class="card"><div class="num">OPPORTUNITÉ</div><h3>Prolonger la confiance</h3><p>Faire passer le patient de « je découvre » à « je sais quoi faire ».</p></div>
+</div>
 </section>
 
-<section class="test section" id="test">
-  <div class="section-head compact">
-    <p class="eyebrow">03 — TESTEZ LE PARCOURS</p>
-    <h2>Faites le patient.<br><em>Pas le visiteur d'un site.</em></h2>
-    <p>Choisissez ce que vous cherchez. Le parcours change. C'est précisément la différence entre une page de services et une expérience.</p>
-  </div>
-  <div class="test-shell">
-    <div class="test-prompt">
-      <div class="prompt-label">FUSION · PREMIER CONTACT</div>
-      <h3>Vous venez de découvrir la clinique.<br>Pourquoi êtes-vous ici ?</h3>
-      <div class="choices" id="choices">
-        <button data-type="pain"><span>01</span><strong>J'ai une douleur / urgence</strong><i>↗</i></button>
-        <button data-type="esthetic"><span>02</span><strong>J'ai un projet esthétique</strong><i>↗</i></button>
-        <button data-type="replace"><span>03</span><strong>Je cherche à remplacer une dent</strong><i>↗</i></button>
-        <button data-type="align"><span>04</span><strong>Je veux aligner mes dents</strong><i>↗</i></button>
-        <button data-type="question"><span>05</span><strong>Je veux simplement me renseigner</strong><i>↗</i></button>
-      </div>
-    </div>
-    <div class="journey-result" id="journeyResult">
-      <span class="result-placeholder">VOTRE PARCOURS APPARAÎTRA ICI</span>
-    </div>
-  </div>
+<section class="wrap" id="experience">
+<div class="eyebrow">02 · Test réel</div>
+<h2>Vous êtes le patient.</h2>
+<p class="lead">Choisissez une situation. Le parcours change avec votre besoin. C'est volontairement plus proche d'un test produit que d'une présentation de site.</p>
+<div class="chooser">
+<button class="choice" data-type="urgence"><strong>J'ai besoin de soins</strong><span>Je veux savoir quoi faire sans chercher partout.</span></button>
+<button class="choice" data-type="esthetique"><strong>Je cherche une solution esthétique</strong><span>Je veux comprendre les possibilités avant de contacter la clinique.</span></button>
+<button class="choice" data-type="implant"><strong>Je pense à un implant</strong><span>Je veux être rassuré et savoir quelle est la prochaine étape.</span></button>
+<button class="choice" data-type="info"><strong>Je veux simplement me renseigner</strong><span>Je ne suis pas encore prêt à prendre rendez-vous.</span></button>
+</div>
+<div class="result" id="result">
+<div class="tag" id="rTag"></div><h3 id="rTitle"></h3><p id="rText"></p>
+<div class="flow" id="rFlow"></div>
+<a class="btn" href="#direction">Voir ce que cela change →</a>
+</div>
 </section>
 
-<section class="difference section">
-  <div class="difference-top">
-    <p class="eyebrow">04 — LA DIFFÉRENCE</p>
-    <h2>Un template montre des pages.<br><em>Ce prototype montre un comportement.</em></h2>
-  </div>
-  <div class="compare">
-    <div class="compare-card old">
-      <div class="compare-label">PRÉSENCE DIGITALE CLASSIQUE</div>
-      <div class="stack"><span>Google</span><b>→</b><span>Instagram</span><b>→</b><span>Liste de soins</span><b>→</b><span>« Contactez-nous »</span></div>
-      <p>Le patient doit faire le lien lui-même entre son besoin et l'action suivante.</p>
-    </div>
-    <div class="compare-arrow">+</div>
-    <div class="compare-card new">
-      <div class="compare-label">PROPOSITION POUR FUSION</div>
-      <div class="stack"><span>Découvrir</span><b>→</b><span>Choisir son besoin</span><b>→</b><span>Être rassuré</span><b>→</b><strong>Agir</strong></div>
-      <p>Le parcours accompagne la décision au lieu de simplement afficher l'information.</p>
-    </div>
-  </div>
+<section class="wrap">
+<div class="eyebrow">03 · La logique</div>
+<h2>Le site final ne serait pas une collection de pages.</h2>
+<div class="flow">
+<div class="step"><b>Découvrir</b><span>Comprendre immédiatement où l'on est.</span></div>
+<div class="step"><b>S'orienter</b><span>Partir du besoin du patient, pas du vocabulaire interne.</span></div>
+<div class="step"><b>Se rassurer</b><span>Voir les preuves et informations utiles au bon moment.</span></div>
+<div class="step"><b>Agir</b><span>Une prochaine action évidente, adaptée au contexte.</span></div>
+</div>
 </section>
 
-<section class="space section">
-  <div class="space-copy">
-    <p class="eyebrow">05 — UNE PREUVE QUI EXISTE DÉJÀ</p>
-    <h2>Votre environnement n'a pas besoin d'être <em>inventé.</em></h2>
-    <p>Les contenus publics disponibles montrent déjà une identité physique forte. Le prototype utilise ces éléments comme preuve, pas comme décoration.</p>
-    <div class="mini-rule"></div>
-    <p class="small-note"><strong>Principe :</strong> aucune photo stock utilisée pour faire croire qu'elle appartient à Fusion.</p>
-  </div>
-  <div class="space-gallery">
-    <figure class="tall"><img src="assets/fusion-lounge.jpg" alt="Espace intérieur visible dans les contenus fournis"></figure>
-    <figure><img src="assets/fusion-waiting-room.jpg" alt="Espace d'accueil visible dans les contenus fournis"></figure>
-    <figure class="detail"><img src="assets/fusion-dental-detail.jpg" alt="Détail dentaire visible dans les contenus fournis"></figure>
-  </div>
+<section class="wrap">
+<div class="eyebrow">04 · Avant / après</div>
+<h2>Ce que nous essayons de supprimer.</h2>
+<div class="compare">
+<div><div class="num">DÉCOUVERTE CLASSIQUE</div><h3>« Je vous ai trouvé. Et maintenant ? »</h3><p>Le patient doit chercher, comparer les informations, décider ce qui le concerne puis trouver comment contacter la clinique.</p></div>
+<div class="after"><div class="num">DIRECTION PROPOSÉE</div><h3>« Je comprends quoi faire ensuite. »</h3><p>Le besoin devient le point de départ. L'information, la preuve et l'action arrivent dans un ordre logique.</p></div>
+</div>
+<p class="quote">Le but n'est pas de rendre Fusion « plus jolie en ligne ». <strong>Le but est de faire commencer l'expérience Fusion avant l'arrivée à la clinique.</strong></p>
 </section>
 
-<section class="why section" id="why">
-  <div class="why-card">
-    <div>
-      <p class="eyebrow">06 — POURQUOI FUSION ?</p>
-      <h2>Parce que la présence<br>est déjà là.</h2>
-    </div>
-    <div class="why-proof">
-      <div class="big-rating"><strong>4,7</strong><span>★★★★★</span><small>213 avis publics</small></div>
-      <p>Ce prototype ne part donc pas d'une clinique inconnue à qui l'on propose « un site ». Il part d'une activité qui possède déjà <strong>une preuve publique, une localisation, des services visibles et un environnement identifiable.</strong></p>
-      <p>La question devient : <strong>que se passe-t-il entre cette première découverte et le prochain geste du patient ?</strong></p>
-    </div>
-  </div>
+<section class="wrap" id="direction">
+<div class="eyebrow">05 · Ce que cela change</div>
+<h2>Une proposition commerciale, pas une promesse marketing.</h2>
+<div class="grid">
+<div class="card"><div class="num">01</div><h3>Une première impression maîtrisée</h3><p>La réputation publique de Fusion devient une partie visible de l'expérience, au lieu de rester séparée du parcours digital.</p></div>
+<div class="card"><div class="num">02</div><h3>Une orientation plus claire</h3><p>Le patient peut commencer par son besoin et accéder plus vite à l'information pertinente.</p></div>
+<div class="card"><div class="num">03</div><h3>Une prochaine action évidente</h3><p>Le contact devient la suite naturelle du parcours plutôt qu'une action à chercher.</p></div>
+</div>
 </section>
 
-<section class="services section">
-  <div class="services-intro">
-    <p class="eyebrow">07 — LES SERVICES, AUTREMENT</p>
-    <h2>Le patient ne pense pas en <em>menu.</em></h2>
-    <p>Il pense en problème, objectif ou question. Voici comment les services publics de Fusion peuvent devenir des points d'entrée plutôt qu'une simple liste.</p>
-  </div>
-  <div>
-    <div class="service-board" id="serviceBoard">
-      <button data-service="Soins dentaires"><span>01</span><strong>Soins dentaires</strong><small>Problème →</small></button>
-      <button data-service="Prothèses fixes"><span>02</span><strong>Prothèses fixes</strong><small>Besoin →</small></button>
-      <button data-service="Implantologie"><span>03</span><strong>Implantologie</strong><small>Comprendre →</small></button>
-      <button data-service="Botox & filler"><span>04</span><strong>Botox & filler</strong><small>Projet →</small></button>
-      <button data-service="Orthodontie (ODF)"><span>05</span><strong>Orthodontie (ODF)</strong><small>Objectif →</small></button>
-      <button data-service="Chirurgie orale"><span>06</span><strong>Chirurgie orale</strong><small>Orienter →</small></button>
-      <button data-service="Facettes dentaires"><span>07</span><strong>Facettes dentaires</strong><small>Projet esthétique →</small></button>
-    </div>
-    <div class="service-detail" id="serviceDetail"><span>Choisissez un service.</span> Vous verrez comment il peut devenir un point de départ patient.</div>
-  </div>
+<section class="wrap">
+<div class="eyebrow">06 · Pourquoi Fusion</div>
+<h2>Parce que votre réputation n'a pas besoin d'être inventée.</h2>
+<p class="lead">Le travail consiste à transformer une preuve déjà visible — <strong>4,7★ et 213 avis</strong> — en une expérience digitale cohérente. Tout ce qui relève du fonctionnement interne, des performances commerciales ou des résultats futurs reste volontairement à valider avec Fusion.</p>
+<div style="margin-top:20px"><span class="pill">Baba Hassen</span><span class="pill">Dental</span><span class="pill">Patient experience</span><span class="pill">Mobile-first</span><span class="pill">Conversion path</span></div>
 </section>
 
-<section class="value section">
-  <div class="section-head compact">
-    <p class="eyebrow">08 — CE QUE CELA CHANGE</p>
-    <h2>Pas « plus de pages ».<br><em>Moins de friction.</em></h2>
-    <p>Le produit final n'est pas vendu comme une promesse de résultats chiffrés. Il est conçu pour améliorer les moments où un patient hésite, cherche ou ne sait pas quoi faire ensuite.</p>
-  </div>
-  <div class="value-grid">
-    <article><span>01</span><h3>Première impression maîtrisée</h3><p>La découverte digitale commence à ressembler à l'expérience que Fusion veut faire vivre sur place.</p></article>
-    <article><span>02</span><h3>Orientation plus claire</h3><p>Le patient part de son besoin avant de devoir comprendre l'organisation des soins.</p></article>
-    <article><span>03</span><h3>Action plus évidente</h3><p>Chaque parcours se termine par une prochaine étape claire, sans prétendre qu'un système est déjà connecté.</p></article>
-    <article><span>04</span><h3>Base prête à connecter</h3><p>Appel, WhatsApp ou prise de rendez-vous peuvent être branchés selon le fonctionnement choisi par Fusion.</p></article>
-  </div>
-</section>
-
-<section class="direction section">
-  <div class="direction-card">
-    <div class="direction-head">
-      <p class="eyebrow">09 — POUR LA DIRECTION</p>
-      <h2>Vous venez de tester<br><em>la proposition.</em></h2>
-      <p>Ce que vous avez vu n'est pas présenté comme un site final ni comme un template acheté ailleurs. C'est une démonstration construite à partir des éléments publics disponibles autour de Fusion.</p>
-    </div>
-    <div class="direction-grid">
-      <div><span>01</span><strong>Votre activité</strong><small>Localisation, avis, services et environnement observables.</small></div>
-      <div><span>02</span><strong>Notre proposition</strong><small>Structure, parcours, interface et interactions conçus pour cette expérience.</small></div>
-      <div><span>03</span><strong>La suite</strong><small>Valider la direction, puis connecter les contenus et canaux réels de Fusion.</small></div>
-    </div>
-    <div class="close">
-      <div>
-        <span class="close-kicker">LA QUESTION N'EST PLUS « AVEZ-VOUS BESOIN D'UN SITE ? »</span>
-        <h3>Cette direction mérite-t-elle d'être construite pour Fusion ?</h3>
-        <p>Si oui, je peux vous montrer en 5 minutes ce qui serait réellement produit.</p>
-      </div>
-      <a class="btn light" href="tel:+213555555596">Discuter de la direction <span>↗</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="final section">
-  <p class="eyebrow">FUSION · BABA HASSEN · ALGER</p>
-  <h2>Une expérience premium<br>ne devrait pas commencer<br><em>à la porte.</em></h2>
-  <p>Elle peut commencer au moment où quelqu'un vous découvre.</p>
-  <a class="btn primary" href="tel:+213555555596">0555 55 55 96 <span>↗</span></a>
-  <p class="fineprint">Prototype de démonstration · Données publiques utilisées avec prudence · Aucun résultat médical, témoignage ou système de réservation inventé.</p>
+<section class="wrap">
+<div class="decision">
+<div class="eyebrow" style="color:#e7b28e">07 · La suite</div>
+<h2>Ce prototype n'est pas le produit final.</h2>
+<p>Il sert à valider une direction avant de construire. Si cette logique vous paraît pertinente pour Fusion, l'étape suivante est de la transformer en véritable site : identité visuelle finale, contenus validés, parcours mobile, contact/WhatsApp ou réservation selon votre fonctionnement, puis mise en ligne.</p>
+<p><strong>La question n'est donc pas : « Avez-vous besoin d'un site ? »</strong><br>La question est : <strong>« Cette direction mérite-t-elle d'être construite pour Fusion ? »</strong></p>
+<a class="btn" href="tel:+213555555596">Parler de la direction → 0555 55 55 96</a>
+</div>
 </section>
 </main>
+<footer class="foot"><div class="wrap">FUSION — BEFORE THE DOOR · Prototype de démonstration personnalisé · Les éléments factuels sont limités aux informations publiques utilisées pour cette démonstration.</div></footer>
 
-<div class="mobile-cta"><a href="#test">Tester le parcours <span>↓</span></a></div>
-<script src="assets/app.js"></script>
+<script>
+const data={
+urgence:{tag:"PARCOURS · SOINS",title:"Le patient cherche d'abord une direction.",text:"Au lieu de lui demander de comprendre toute l'offre, on lui donne une prochaine étape claire.",steps:[["01","Identifier","Comprendre rapidement le besoin."],["02","Rassurer","Accéder aux informations utiles."],["03","Agir","Appeler ou contacter Fusion."]]},
+esthetique:{tag:"PARCOURS · ESTHÉTIQUE",title:"Le patient veut comprendre avant de décider.",text:"Le parcours met l'information et la réassurance avant le contact, sans pousser artificiellement à la réservation.",steps:[["01","Explorer","Voir les possibilités pertinentes."],["02","Comprendre","Réduire les questions essentielles."],["03","Agir","Poser une question ou demander un rendez-vous."]]},
+implant:{tag:"PARCOURS · IMPLANTOLOGIE",title:"Le patient cherche de la confiance avant l'action.",text:"L'information, les preuves et la prochaine étape sont présentées dans cet ordre.",steps:[["01","Comprendre","Voir le parcours proposé."],["02","Être rassuré","Accéder aux éléments de confiance."],["03","Contacter","Passer à une conversation avec la clinique."]]},
+info:{tag:"PARCOURS · DÉCOUVERTE",title:"Pas encore prêt ? Le parcours ne force pas la vente.",text:"Une bonne première expérience doit aussi laisser une personne se renseigner calmement avant de demander un rendez-vous.",steps:[["01","Découvrir","Comprendre Fusion en quelques secondes."],["02","Apprendre","Trouver l'information recherchée."],["03","Revenir","Garder une prochaine action claire."]]}
+};
+document.querySelectorAll(".choice").forEach(b=>b.addEventListener("click",()=>{
+const d=data[b.dataset.type];document.getElementById("rTag").textContent=d.tag;document.getElementById("rTitle").textContent=d.title;document.getElementById("rText").textContent=d.text;
+document.getElementById("rFlow").innerHTML=d.steps.map(s=>`<div class="step"><b>${s[0]} · ${s[1]}</b><span>${s[2]}</span></div>`).join("");
+document.getElementById("result").classList.add("show");document.getElementById("result").scrollIntoView({behavior:"smooth",block:"center"});
+}));
+</script>
 </body>
 </html>
