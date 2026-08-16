@@ -1,9 +1,1 @@
-
-document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll('a[href^="#"]');
-  links.forEach(link => link.addEventListener("click", e => {
-    const id = link.getAttribute("href");
-    const target = document.querySelector(id);
-    if (target) { e.preventDefault(); target.scrollIntoView({behavior:"smooth", block:"start"}); }
-  }));
-});
+(function(){const reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;document.querySelectorAll("video[data-autoplay]").forEach(v=>{if(!reduce)v.play().catch(()=>{});document.addEventListener("visibilitychange",()=>{if(document.hidden)v.pause();else if(!reduce)v.play().catch(()=>{})})});document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener("click",e=>{const t=document.querySelector(a.getAttribute("href"));if(t){e.preventDefault();t.scrollIntoView({behavior:reduce?"auto":"smooth"})}}))})();
